@@ -1,0 +1,9 @@
+The following CSS rule, while seemingly innocuous, can lead to unexpected layout issues, especially when combined with other styles or responsive design techniques: 
+
+```css
+div { width: auto; }
+```
+
+**The Problem:**
+
+The `width: auto;` declaration, while often used as a default or to let an element's width be determined by its content, can behave inconsistently. In certain contexts (particularly when the element is within a flexbox or grid layout), `auto` might not behave as intuitively expected. For example, an element might collapse to zero width if its content doesn't inherently define a width, even if there's sufficient space available in its parent container.
